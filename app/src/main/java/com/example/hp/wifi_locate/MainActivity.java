@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button scan;
     boolean wasEnabled;
     WifiManager myWifiManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,62 +39,27 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter i = new IntentFilter();
         i.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
         i.addAction("android.net.wifi.p2p.THIS_DEVICE_CHANGED");
-        registerReceiver(new MyBroadcastReciever(),i);
+        registerReceiver(new MyBroadcastReciever(), i);
         result.setMovementMethod(new ScrollingMovementMethod());
-        myWifiManager = (WifiManager)getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        myWifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wasEnabled = myWifiManager.isWifiEnabled();
         myWifiManager.setWifiEnabled(true);
-        if(!checkPermission()) {
-            scan.setEnabled(false);
-        }
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(myWifiManager.isWifiEnabled()) {
+                if (myWifiManager.isWifiEnabled()) {
                     myWifiManager.startScan();
                 }
             }
         });
     }
+
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             myWifiManager.setWifiEnabled(wasEnabled);
             this.finish();
         }
         return super.onKeyDown(keyCode, event);
-    }
-    private boolean checkPermission() {
-
-        List<String> permissionsList = new ArrayList<String>();
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_WIFI_STATE) != PackageManager.PERMISSION_GRANTED) {
-            permissionsList.add(Manifest.permission.ACCESS_WIFI_STATE);
-        }
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CHANGE_WIFI_STATE) != PackageManager.PERMISSION_GRANTED) {
-            permissionsList.add(Manifest.permission.CHANGE_WIFI_STATE);
-        }
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            permissionsList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-
-        if (permissionsList.size() > 0) {
-            ActivityCompat.requestPermissions(this, permissionsList.toArray(new String[permissionsList.size()]),
-                    1);
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                                           int[] grantResults) {
-        switch (requestCode) {
-            case 1:scan.setEnabled(true);
-
-                break;
-        }
     }
 
 
