@@ -45,6 +45,9 @@ Data and a comprehensive database of WLANs and their exact location which is pro
  even when MAC address randomization is used. The network name and BSSID can be used to geolocate users via a lookup against a 
  database of BSSID such as WiGLE or SkyHook or OpenWifi.su. 
  
+ Install the “Internal Broadcasts Monitor” application developed by Vilius Kraujutis from Google Play or WIFI_monitor from my repository to observe BSSID and SSID of Access Points and Device Address.
+ 
+ <img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(11).png" alt="image" height="400px" width="500px">
   
  ## Targetting Android SDK < 23 to bypass location permission and obtain WifiManager.getScanResults()    
   Starting from Android 6(API 23) apps requires location permission for WifiManager.getScanResults().However, apps targeting 
