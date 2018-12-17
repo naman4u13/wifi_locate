@@ -88,7 +88,7 @@ Data and a comprehensive database of WLANs and their exact location which is pro
 from all around the world in [WiGLE.net](https://wigle.net/) Database.
 
 
-<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(9).png" alt="image" height="300px" width="200px">
+<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(9).png" alt="image" height="400px" width="500px">
 
 
 OpenWifi.su provides API to query for location coordinates using a list of BSSIDs.
