@@ -16,7 +16,7 @@
 The application provide user's location without the need of accessing GPS.It works upon the shortcomings of Android OS Leaking Sensitive 
 Data and a comprehensive database of WLANs and their exact location which is provided by website project [OpenWifi.su](https://OpenWifi.su).
 
-<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot_2018-12-17-16-52-42.png" alt="image" height="300px" width="200px">
+<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot_2018-12-17-16-52-42.png" alt="image" height="400px" width="300px">
 
 
 
@@ -86,7 +86,10 @@ Data and a comprehensive database of WLANs and their exact location which is pro
  table to fetch gps coordinates using just BSSID. This act of searching and collecting Wi-Fi wireless networks data is called War-driving
  or War-cycling or War-walking depending on the mode of transportation.Below image shows the discovered and registered Access Points 
 from all around the world in [WiGLE.net](https://wigle.net/) Database.
+
+
 <img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(9).png" alt="image" height="300px" width="200px">
+
 
 OpenWifi.su provides API to query for location coordinates using a list of BSSIDs.
 ```
