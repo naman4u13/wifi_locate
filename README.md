@@ -26,7 +26,7 @@ Data and a comprehensive database of WLANs and their exact location which is pro
 ### Prerequisites
   * You need to have Android Studio installed on your system.[Download Link](https://developer.android.com/studio/)
   * You need to have an Android Device with Debugger enabled.
-  
+  * **WLAN networks around you should already have been uploaded on [OpenWifi.su](https://OpenWifi.su) project**,
 
  ### Installation (setting up project)
   * Download the zip file and extract it.
@@ -86,9 +86,7 @@ Data and a comprehensive database of WLANs and their exact location which is pro
 ## Using OpenWifi.su API to fetch GPS coordinates
  OpenWifi.su is a website for collecting information about the different wireless hotspots around the world. Users can upload 
  hotspot data like GPS coordinates, SSID and MAC address(BSSID).Once entered in database, it can be then later used as a lookup
- table to fetch gps coordinates using just BSSID. This act of searching and collecting Wi-Fi wireless networks data is called War-driving
- or War-cycling or War-walking depending on the mode of transportation.Below image shows the discovered and registered Access Points 
-from all around the world in [WiGLE.net](https://wigle.net/) Database.
+ table to fetch gps coordinates using just BSSID. This act of searching and collecting Wi-Fi wireless networks data is called War-driving or War-cycling or War-walking depending on the mode of transportation.You can perform the above activity by either manually entering WLAN network in the database along with its geoposition on this [page](https://openwifi.su/addmac.php?lang=) or using [OpenWLANMap](https://openwifi.su/owlmapatandroid.php?lang=) Android app which you can download via FDroid.**Remember WLAN network along with its location has to be first stored in database, after which wifi_locate app can access WLAN's location**.Below image shows the discovered and registered Access Points from all around the world in [WiGLE.net](https://wigle.net/) Database.
 
 
 <img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(9).png" alt="image" height="400px" width="800px">
