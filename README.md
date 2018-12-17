@@ -7,19 +7,16 @@
 2. [Getting Started](#getting-started)
    * [Prerequisites](#prerequisites)
    * [Installation](#installation-setting-up-project)
-3. [Exploiting Sensitive Data Exposure via WiFi Broadcasts in Android OS](#Exploiting Sensitive Data Exposure via WiFi Broadcasts in Android OS)
-    * [Search and Fetch Symptom](#search-and-fetch-symptom) 
-    * [Fetching Auth Token](#fetching-auth-token)
-    * [ Working with Volley Library](#working-with-volley-library)
-4. [ API 3](#api-3)
-    * [Web Scraping for a given Diagnosis](#web-scraping-for-a-given-diagnosis)
-    * [Use of Firebase Relatime Database](#use-of-firebase-relatime-database)
-5. [API 5](#api-5)
+3. [Exploiting Sensitive Data Exposure via WiFi Broadcasts in Android OS](#exploiting-sensitive-data-exposure-via-wifi-broadcasts-in-android-os)
+4. [Targetting Android SDK < 23 to bypass location permission and obtain WifiManager.getScanResults()](#targetting-android-sdk<23-to-bypass-location-permission-and-obtain-wifimanager.getscanresults())
+5. [ Using OpenWifi.su API to fetch GPS coordinates](#using-openwifi.su-api-to-fetch-gps-coordinates)
    
 
 ## Description
 The application provide user's location without the need of accessing GPS.It works upon the shortcomings of Android OS Leaking Sensitive 
 Data and a comprehensive database of WLANs and their exact location which is provided by website project [OpenWifi.su](https://OpenWifi.su).
+
+<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot_2018-12-17-16-52-42.png" alt="image" height="300px" width="200px">
 
 
 
@@ -83,15 +80,13 @@ Data and a comprehensive database of WLANs and their exact location which is pro
 ```
    
    
-
-<img src="https://github.com/naman4u13/medic/blob/master/Img/Screenshot%20(6).png" alt="image" height="200px" width="300px" align="left">
- <img src="https://github.com/naman4u13/medic/blob/master/Img/Screenshot_2018-10-17-21-04-42.png" alt="image" height="300px" width="200px" >
-
 ## Using OpenWifi.su API to fetch GPS coordinates
  OpenWifi.su is a website for collecting information about the different wireless hotspots around the world. Users can upload 
  hotspot data like GPS coordinates, SSID and MAC address(BSSID).Once entered in database, it can be then later used as a lookup
  table to fetch gps coordinates using just BSSID. This act of searching and collecting Wi-Fi wireless networks data is called War-driving
- or War-cycling or War-walking depending on the mode of transportation.
+ or War-cycling or War-walking depending on the mode of transportation.Below image shows the discovered and registered Access Points 
+from all around the world in [WiGLE.net](https://wigle.net/) Database.
+<img src="https://github.com/naman4u13/wifi_locate/blob/master/img/Screenshot%20(9).png" alt="image" height="300px" width="200px">
 
 OpenWifi.su provides API to query for location coordinates using a list of BSSIDs.
 ```
